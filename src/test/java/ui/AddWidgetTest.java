@@ -1,3 +1,5 @@
+package ui;
+
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
