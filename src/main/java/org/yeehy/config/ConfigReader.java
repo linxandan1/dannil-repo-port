@@ -1,4 +1,4 @@
-package org.yeehy;
+package org.yeehy.config;
 
 import java.io.FileInputStream;
 import java.io.IOException;
