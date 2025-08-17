@@ -7,13 +7,12 @@ import java.util.Properties;
 public class ConfigReader {
     private static final Properties properties = new Properties();
 
-    public static void main(String[] args) {
-            try (FileInputStream fis = new FileInputStream("src/main/resources/config.properties")) {
-                properties.load(fis);
-                System.out.println("ye");
-            } catch (IOException e) {
-                throw new RuntimeException("Не удалось загрузить config.properties", e);
-            }
+    static {
+        try (FileInputStream fis = new FileInputStream("src/main/resources/config.properties")) {
+            properties.load(fis);
+        } catch (IOException e) {
+            throw new RuntimeException("Не удалось загрузить config.properties", e);
+        }
     }
 
     public static String getProperty(String key) {
